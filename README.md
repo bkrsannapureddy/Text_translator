@@ -2,6 +2,8 @@
 
 commands to set virtual python environment and run the python server
 
+* use ChatGPT API key in api.py code
+  
 1) python -m venv env
 
 2) .\env\Scripts\activate
