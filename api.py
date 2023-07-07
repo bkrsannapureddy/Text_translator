@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 import openai
 
 app = Flask(__name__)
-openai.api_key = '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'
+openai.api_key = 'ChatGPT API key'
 
 @app.route('/')
 def home():
