@@ -1,4 +1,22 @@
 # Text_translator
+
+commands to set virtual python environment and run the python server
+
+1) python -m venv env
+
+2) .\env\Scripts\activate
+
+3) source env/bin/activate
+
+4) pip install flask openai
+
+5) python api.py
+
+6)paste this link in browswer:- http://localhost:5000
+
+
+Introduction
+
 Using ChatGPT API key we are translating user text into user liked target languages
 
 
