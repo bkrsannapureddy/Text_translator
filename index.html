@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Translator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body style=" margin-left:300px; margin-right:300px; background-color: rgb(104, 106, 104);">
+  
+    <div style="background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzlJIEasA6BzKzSVQfg0EgxsDqLanX71y0JA&usqp=CAU);">
+    <center><h1 style=" font-family:'Times New Roman';background-color:rgb(221, 230, 58);color:black;"><u>Language Translator</u></h1><br/><br/>
+    <form method="POST" action="/translate">
+       <label style="font-size: 30px;font-weight: bold;font-weight: 400; color: rgb(12, 11, 11);background-color:rgb(128, 198, 187); font-family:'Times New Roman';">Enter your text : -</label>
+       <textarea name="user_text" style=" font-size:20px;background-color:  rgb(242, 199, 241);"></textarea><br/><br/><br/>
+       <label style="font-size: 30px; color: rgb(12, 11, 11);background-color:rgb(141, 209, 214);font-weight: bold;font-weight: 400 ;font-family:'Times New Roman';">Select you target language : -</label>
+        <select name="target_language" style=" font-size: 20px; background-color: rgb(235, 195, 234);">
+            <option value="Error">select</option>
+            <option value="French">French</option>
+            <option value="Spanish">Spanish</option>
+            <option value="German">German</option>
+            <option value="English">English</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Urdu">Urdu</option>
+            <option value="Tamil">Tamil</option>
+            <option value="Arabic">Arabic</option>
+            <option value="Punjabi">Punjabi</option>
+            <option value="Bengali">Bengali</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Gujarati">Gujarati</option>
+            <option value="Koren">Koren</option>
+            <option value="Malayalam">Malayalam</option>
+            <option value="Marati">Marati</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Nepali">Nepali</option>
+            <option value="Thai">Thai</option>
+            <option value="Latin">Latin</option>
+            <option value="Braille">Braille</option>
+            <option value="Dari">Dari</option>
+            <option value="Farsi">Farsi</option>
+            <option value="Portuguese">Portuguese</option>
+            <option value="Greek">Greek</option>
+            <option value="Italain">Italain</option>
+            <option value="Swedish">Swedish</option>
+            <option value="Somali">Somali</option>
+            <option value="Icelandic">Icelandic</option>
+            <option value="British">British</option>
+            <option value="Haitian">Haitian</option>
+            <option value="Polish">Polish</option>
+            <option value="Russian">Russian</option>
+            <option value="Turkish">Turkish</option>
+            <option value="Ukranian">Ukranian</option>
+            <option value="Serbian">Serbian</option>
+            <!-- Add more language options here -->
+        </select><br/><br/><br/><br/>
+        <input type="submit" value="Translate" style=" font-size: 30px; background-color: rgb(231, 176, 12);">
+    </form><br/><br/><br/><br/>
+    <br/><br/>
+    
+    {% if translated_text %}
+    <div class="translation-result">
+        <h2 style="font-size: 20px; color: chartreuse;">Translation Result: <span style="margin-left: 30px;color:rgb(245, 11, 11)">{{ translated_text }}</span></h2><br/><br/>
+        
+    </div></center>
+    {% endif %}
+    </div>
+</body>
+
+</html>
